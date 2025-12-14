@@ -1,0 +1,7 @@
+fastapi
+uvicorn
+langchain
+langgraph
+weaviate-client>=3.26.7,<4.0.0
+sentence-transformers
+ollama
