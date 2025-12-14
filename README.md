@@ -127,6 +127,15 @@ An evaluation script is provided at:
 ```bash
 evaluation/evaluate_rag.py
 
+### HyDE Retrieval 
+
+The retrieval pipeline was enhanced using **HyDE (Hypothetical Document Embeddings)**.
+Instead of directly embedding the user query, the system first generates a hypothetical answer using the local LLM and performs retrieval using that generated text.
+
+This improves semantic recall and contextual relevance, especially for abstract questions.
+
+In the folder their is hyde_retriever.py file which is the Implementation of the Hypothetical Document Embeddings and in the agent.py file i have commented migration to the hyde pipeline code currently it is basic document ingestion and retreival , if need to change to the hyDE pipeline just uncomment these lines and comment the need lines of codes and re-run , then it good to go and will be successfully functioning with the Hypothetical Document Embeddings System.
+
 
 
 
