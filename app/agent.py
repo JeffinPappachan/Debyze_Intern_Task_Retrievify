@@ -1,6 +1,7 @@
 from langgraph.graph import StateGraph
 from app.retriever import retrieve_docs
 from app.llm import llm
+# from app.hyde_retriever import hyde_retrieve_docs
 
 
 def retrieval_node(state: dict) -> dict:
@@ -13,6 +14,19 @@ def retrieval_node(state: dict) -> dict:
         "query": state["query"],
         "context": docs
     }
+
+# USE_HYDE = True
+
+# def retrieval_node(state: dict) -> dict:
+#     if USE_HYDE:
+#         docs = hyde_retrieve_docs(state["query"])
+#     else:
+#         docs = retrieve_docs(state["query"])
+
+#     return {
+#         "query": state["query"],
+#         "context": docs
+#     }
 
 
 def reasoning_node(state: dict) -> dict:
