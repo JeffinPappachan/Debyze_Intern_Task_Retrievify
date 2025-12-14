@@ -109,7 +109,23 @@ Example Response
   "answer": "The document describes guidelines and operational rules related to..."
 }
 
+📊 Evaluation 
 
+This project follows a Retrieval-Augmented Generation (RAG) evaluation methodology using the **RAGAS** framework.
+
+### Metrics Used
+The following metrics are defined for evaluation:
+
+- **Context Precision** – Measures how much of the retrieved context is relevant
+- **Context Recall** – Measures whether relevant context was retrieved
+- **Faithfulness** – Ensures answers are grounded in retrieved documents
+- **Answer Relevancy** – Measures how well the answer addresses the user query
+
+### Evaluation Script
+An evaluation script is provided at:
+
+```bash
+evaluation/evaluate_rag.py
 
 
 
